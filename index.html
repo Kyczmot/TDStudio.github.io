@@ -6,12 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="TD Studio is an indie game development studio creating engaging games like Mahjong Wars." />
   <link rel="stylesheet" href="styles.css" />
+  <!-- Add favicon: <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 </head>
 <body>
   <header class="site-header">
     <div class="container header-content">
       <div class="logo-block">
-        <img src="logo.png" alt="TD Studio logo" class="logo" />
+        <a href="index.html" aria-label="TD Studio home">
+          <img src="logo.png" alt="TD Studio logo" class="logo" />
+        </a>
       </div>
       <nav class="main-nav">
         <a href="#games">Games</a>
@@ -38,10 +41,15 @@
 
     <section id="games" class="section section-dark">
       <div class="container">
-        <h2>Games</h2>
+        <h2 class="section-title">Games</h2>
 
         <div class="game-card">
-          <div class="game-info">
+          <div class="game-card-inner">
+            <div class="game-visual">
+              <!-- Replace with <img src="mahjong-wars-thumb.png" alt="Mahjong Wars" /> when ready -->
+              <div class="game-visual-placeholder">Mahjong Wars</div>
+            </div>
+            <div class="game-info">
             <h3>Mahjong Wars</h3>
             <p>
               Mahjong Wars combines classic mahjong gameplay with modern visuals and progression systems.
@@ -56,6 +64,7 @@
                 Watch Trailer
               </a>
             </div>
+            </div>
           </div>
         </div>
 
@@ -65,7 +74,7 @@
 
     <section id="about" class="section">
       <div class="container">
-        <h2>About TD Studio</h2>
+        <h2 class="section-title">About TD Studio</h2>
         <p>
           TD Studio is a small game development studio focused on delivering accessible, polished and
           enjoyable games. We care about fair design, clear communication and respecting our players' time.
@@ -75,7 +84,7 @@
 
     <section id="contact" class="section section-dark">
       <div class="container">
-        <h2>Contact</h2>
+        <h2 class="section-title">Contact</h2>
         <p>If you have questions, feedback or business inquiries, feel free to reach out:</p>
         <ul class="contact-list">
           <li><strong>Email (general):</strong> <a href="mailto:info@tdstudio.uk">info@tdstudio.uk</a></li>
@@ -89,7 +98,10 @@
   <footer class="site-footer">
     <div class="container footer-content">
       <span>© <span id="year"></span> TD Studio. All rights reserved.</span>
-      <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="footer-links">
+        <a href="#">Back to top</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
     </div>
   </footer>
 
