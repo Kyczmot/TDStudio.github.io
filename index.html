@@ -4,23 +4,23 @@
   <meta charset="UTF-8" />
   <title>TD Studio – Game Development</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="TD Studio is an indie game development studio creating engaging games like Mahjong Wars." />
+  <meta name="description" content="TD Studio is an indie game development studio creating engaging games like Mahjong Siege." />
   <link rel="stylesheet" href="styles.css" />
   <!-- Add favicon: <link rel="icon" href="favicon.ico" type="image/x-icon" /> -->
 </head>
-<body>
+<body id="top">
   <header class="site-header">
     <div class="container header-content">
       <div class="logo-block">
-        <a href="index.html" aria-label="TD Studio home">
+        <a href="#top" aria-label="TD Studio home">
           <img src="logo.png" alt="TD Studio logo" class="logo" />
         </a>
       </div>
       <nav class="main-nav">
+        <a href="#top">Home</a>
         <a href="#games">Games</a>
         <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="privacy-policy.html">Privacy Policies</a>
       </nav>
     </div>
   </header>
@@ -43,32 +43,102 @@
       <div class="container">
         <h2 class="section-title">Games</h2>
 
-        <div class="game-card">
-          <div class="game-card-inner">
-            <div class="game-visual">
-              <!-- Replace with <img src="mahjong-wars-thumb.png" alt="Mahjong Wars" /> when ready -->
-              <div class="game-visual-placeholder">Mahjong Wars</div>
+        <!-- Mahjong Siege -->
+        <article class="game-detail-card" id="mahjong-siege">
+          <details class="game-details" open>
+            <summary class="game-summary">
+              <span class="game-summary-top">
+                <span class="game-title">Mahjong Siege</span>
+                <span class="game-platforms">Android</span>
+                <span class="game-toggle" aria-hidden="true"></span>
+              </span>
+              <span class="game-tagline">
+                Relaxing tile-matching with handcrafted levels and light progression.
+              </span>
+            </summary>
+            <div class="game-detail-body">
+              <div class="game-gallery" data-rotation="true">
+                <div class="game-gallery-slide is-active">
+                  <!-- Replace with <img src="mahjong-siege-1.png" alt="Mahjong Siege gameplay" /> -->
+                  <div class="game-gallery-placeholder">Mahjong Siege – screenshot 1</div>
+                </div>
+                <div class="game-gallery-slide">
+                  <!-- Replace with <img src="mahjong-siege-2.png" alt="Mahjong Siege level selection" /> -->
+                  <div class="game-gallery-placeholder">Mahjong Siege – screenshot 2</div>
+                </div>
+                <div class="game-gallery-slide">
+                  <!-- Replace with <img src="mahjong-siege-3.png" alt="Mahjong Siege UI" /> -->
+                  <div class="game-gallery-placeholder">Mahjong Siege – screenshot 3</div>
+                </div>
+              </div>
+              <div class="game-detail-text">
+                <p>
+                  Clear boards of tiles at your own pace, experiment with layouts and enjoy a calm,
+                  focused experience. Progress through handcrafted stages designed to be fair and readable,
+                  without aggressive timers or pressure.
+                </p>
+                <p>
+                  Mahjong Siege is built with respect for your time: no predatory monetisation, no confusing
+                  currencies – just straightforward gameplay with optional challenges.
+                </p>
+                <div class="game-links">
+                  <a class="btn primary" href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener noreferrer">
+                    Get it on Google Play
+                  </a>
+                  <a class="btn secondary" href="https://www.youtube.com/watch?v=YOUR_TRAILER_ID" target="_blank" rel="noopener noreferrer">
+                    Watch Trailer
+                  </a>
+                  <a class="btn secondary" href="privacy-policy.html#mahjong-siege">
+                    View Privacy Policy
+                  </a>
+                </div>
+              </div>
             </div>
-            <div class="game-info">
-            <h3>Mahjong Wars</h3>
-            <p>
-              Mahjong Wars combines classic mahjong gameplay with modern visuals and progression systems.
-              Relax, strategise and clear boards across a variety of handcrafted levels.
-            </p>
-            <div class="game-links">
-              <!-- Replace these links with your real store / page URLs -->
-              <a class="btn primary" href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener noreferrer">
-                Get it on Google Play
-              </a>
-              <a class="btn secondary" href="https://www.youtube.com/watch?v=YOUR_TRAILER_ID" target="_blank" rel="noopener noreferrer">
-                Watch Trailer
-              </a>
-            </div>
-            </div>
-          </div>
-        </div>
+          </details>
+        </article>
 
-        <!-- Add more game-card blocks for future games -->
+        <!-- Game 2 placeholder -->
+        <article class="game-detail-card" id="game-2">
+          <details class="game-details">
+            <summary class="game-summary">
+              <span class="game-summary-top">
+                <span class="game-title">Game 2 (Working Title)</span>
+                <span class="game-platforms">Android · Windows / Steam</span>
+                <span class="game-toggle" aria-hidden="true"></span>
+              </span>
+              <span class="game-tagline">
+                Future title – more details will appear here.
+              </span>
+            </summary>
+            <div class="game-detail-body">
+              <div class="game-gallery" data-rotation="true">
+                <div class="game-gallery-slide is-active">
+                  <div class="game-gallery-placeholder">Game 2 – screenshot 1 (placeholder)</div>
+                </div>
+                <div class="game-gallery-slide">
+                  <div class="game-gallery-placeholder">Game 2 – screenshot 2 (placeholder)</div>
+                </div>
+                <div class="game-gallery-slide">
+                  <div class="game-gallery-placeholder">Game 2 – screenshot 3 (placeholder)</div>
+                </div>
+              </div>
+              <div class="game-detail-text">
+                <p class="game-placeholder-text">
+                  Details about Game 2 will be added here, including gameplay overview, key features and
+                  platform information.
+                </p>
+                <div class="game-links">
+                  <a class="btn primary" href="#" aria-disabled="true">
+                    Coming soon
+                  </a>
+                  <a class="btn secondary" href="privacy-policy.html#game-2">
+                    View Privacy Policy (when available)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </details>
+        </article>
       </div>
     </section>
 
@@ -79,18 +149,10 @@
           TD Studio is a small game development studio focused on delivering accessible, polished and
           enjoyable games. We care about fair design, clear communication and respecting our players' time.
         </p>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-dark">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p>If you have questions, feedback or business inquiries, feel free to reach out:</p>
-        <ul class="contact-list">
-          <li><strong>Email (general):</strong> <a href="mailto:info@tdstudio.uk">info@tdstudio.uk</a></li>
-          <li><strong>Email (business):</strong> <a href="mailto:business@tdstudio.uk">business@tdstudio.uk</a></li>
-          <li><strong>Email (support):</strong> <a href="mailto:support@tdstudio.uk">support@tdstudio.uk</a></li>
-        </ul>
+        <p>
+          If you need support or have questions about our games, you can reach us at
+          <a href="mailto:support@tdstudio.uk">support@tdstudio.uk</a>.
+        </p>
       </div>
     </section>
   </main>
@@ -99,14 +161,36 @@
     <div class="container footer-content">
       <span>© <span id="year"></span> TD Studio. All rights reserved.</span>
       <div class="footer-links">
-        <a href="#">Back to top</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="#top">Back to top</a>
+        <a href="privacy-policy.html">Privacy Policies</a>
+      </div>
+      <div class="footer-social">
+        <!-- Replace placeholder URLs with your real social links -->
+        <a href="https://x.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer">X</a>
+        <a href="https://instagram.com/YOUR_HANDLE" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://facebook.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://patreon.com/YOUR_PAGE" target="_blank" rel="noopener noreferrer">Patreon</a>
+        <a href="https://www.youtube.com/@YOUR_CHANNEL_HERE" target="_blank" rel="noopener noreferrer">YouTube</a>
       </div>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple auto-rotating gallery for each game
+    document.querySelectorAll('.game-gallery[data-rotation="true"]').forEach(function (gallery) {
+      const slides = Array.from(gallery.querySelectorAll('.game-gallery-slide'));
+      if (slides.length <= 1) return;
+
+      let currentIndex = 0;
+
+      setInterval(function () {
+        slides[currentIndex].classList.remove('is-active');
+        currentIndex = (currentIndex + 1) % slides.length;
+        slides[currentIndex].classList.add('is-active');
+      }, 3500);
+    });
   </script>
 </body>
 </html>
