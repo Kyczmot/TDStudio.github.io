@@ -290,3 +290,143 @@ body {
     align-items: flex-start;
   }
 }
+
+/* Privacy policy – game blocks (collapsible + logo) */
+
+.policy-container {
+  max-width: var(--max-width);
+}
+
+.policy-game-block {
+  margin-bottom: 2rem;
+}
+
+.policy-game-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), rgba(59, 164, 255, 0.06));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  padding: 0 1rem 1rem;
+}
+
+.policy-game-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.policy-details {
+  border: none;
+}
+
+.policy-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 1rem 0.5rem 1rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: color var(--transition-fast);
+}
+
+.policy-summary::-webkit-details-marker {
+  display: none;
+}
+
+.policy-summary .policy-toggle {
+  display: inline-block;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  margin-left: auto;
+  transition: transform var(--transition-fast);
+}
+
+.policy-details[open] .policy-summary .policy-toggle {
+  transform: rotate(-135deg);
+}
+
+.policy-date {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.policy-body {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.policy-body h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.policy-body h3:first-child {
+  margin-top: 0;
+}
+
+.policy-body p,
+.policy-body li {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.policy-placeholder-text {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.policy-game-logo {
+  flex-shrink: 0;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-game-logo img {
+  max-width: 100%;
+  height: auto;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.game-logo-placeholder {
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 120px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed var(--border-subtle);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .policy-game-row {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .policy-game-logo {
+    width: 100%;
+  }
+
+  .game-logo-placeholder {
+    max-width: 100px;
+    margin: 0 auto;
+  }
+}
