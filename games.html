@@ -37,14 +37,20 @@
         <article class="game-detail-card" id="mahjong-siege">
           <details class="game-details" open>
             <summary class="game-summary">
-              <span class="game-summary-top">
-                <span class="game-title">Mahjong Siege</span>
-                <span class="game-platforms">Android</span>
-                <span class="game-toggle" aria-hidden="true"></span>
-              </span>
-              <span class="game-tagline">
-                Relaxing tile-matching with handcrafted levels and light progression.
-              </span>
+              <div class="game-summary-thumb">
+                <!-- Replace with <img src="mahjong-siege-thumb.png" alt="Mahjong Siege" /> when ready -->
+                <div class="game-summary-thumb-inner">Mahjong Siege</div>
+              </div>
+              <div class="game-summary-body">
+                <span class="game-summary-top">
+                  <span class="game-title">Mahjong Siege</span>
+                  <span class="game-platforms">Android</span>
+                  <span class="game-toggle" aria-hidden="true"></span>
+                </span>
+                <span class="game-tagline">
+                  Relaxing tile-matching with handcrafted levels and light progression.
+                </span>
+              </div>
             </summary>
             <div class="game-detail-body">
               <div class="game-gallery" data-rotation="true">
@@ -91,14 +97,20 @@
         <article class="game-detail-card" id="game-2">
           <details class="game-details">
             <summary class="game-summary">
-              <span class="game-summary-top">
-                <span class="game-title">Game 2 (Working Title)</span>
-                <span class="game-platforms">Android · Windows / Steam</span>
-                <span class="game-toggle" aria-hidden="true"></span>
-              </span>
-              <span class="game-tagline">
-                Future title – more details will appear here.
-              </span>
+              <div class="game-summary-thumb">
+                <!-- Replace with <img src="game-2-thumb.png" alt="Game 2" /> when ready -->
+                <div class="game-summary-thumb-inner">Game 2</div>
+              </div>
+              <div class="game-summary-body">
+                <span class="game-summary-top">
+                  <span class="game-title">Game 2 (Working Title)</span>
+                  <span class="game-platforms">Android · Windows / Steam</span>
+                  <span class="game-toggle" aria-hidden="true"></span>
+                </span>
+                <span class="game-tagline">
+                  Future title – more details will appear here.
+                </span>
+              </div>
             </summary>
             <div class="game-detail-body">
               <div class="game-gallery" data-rotation="true">
@@ -132,6 +144,10 @@
       </div>
     </section>
   </main>
+
+  <div class="lightbox" id="game-lightbox">
+    <div class="lightbox-inner"></div>
+  </div>
 
   <footer class="site-footer">
     <div class="container footer-content">
@@ -167,6 +183,42 @@
         slides[currentIndex].classList.add('is-active');
       }, 3500);
     });
+
+    // Lightbox for enlarging gallery items
+    (function () {
+      const lightbox = document.getElementById('game-lightbox');
+      if (!lightbox) return;
+      const inner = lightbox.querySelector('.lightbox-inner');
+
+      function openLightbox(node) {
+        if (!inner) return;
+        inner.innerHTML = '';
+        inner.appendChild(node.cloneNode(true));
+        lightbox.classList.add('is-open');
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+      }
+
+      document.querySelectorAll('.game-gallery img, .game-gallery-placeholder').forEach(function (el) {
+        el.addEventListener('click', function () {
+          openLightbox(el);
+        });
+      });
+
+      lightbox.addEventListener('click', function (event) {
+        if (event.target === lightbox) {
+          closeLightbox();
+        }
+      });
+
+      window.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          closeLightbox();
+        }
+      });
+    })();
   </script>
 </body>
 </html>
