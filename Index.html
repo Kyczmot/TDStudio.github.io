@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TD Studio – Game Development</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="TD Studio is an indie game development studio creating engaging games like Mahjong Wars." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo-block">
+        <img src="logo.png" alt="TD Studio logo" class="logo" />
+      </div>
+      <nav class="main-nav">
+        <a href="#games">Games</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <h1>TD Studio</h1>
+        <p>Indie game development studio crafting polished and engaging experiences for players around the world.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#games">View Our Games</a>
+          <a class="btn secondary" href="https://www.youtube.com/@YOUR_CHANNEL_HERE" target="_blank" rel="noopener noreferrer">
+            Watch on YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="section section-dark">
+      <div class="container">
+        <h2>Games</h2>
+
+        <div class="game-card">
+          <div class="game-info">
+            <h3>Mahjong Wars</h3>
+            <p>
+              Mahjong Wars combines classic mahjong gameplay with modern visuals and progression systems.
+              Relax, strategise and clear boards across a variety of handcrafted levels.
+            </p>
+            <div class="game-links">
+              <!-- Replace these links with your real store / page URLs -->
+              <a class="btn primary" href="https://play.google.com/store/apps/details?id=YOUR_APP_ID" target="_blank" rel="noopener noreferrer">
+                Get it on Google Play
+              </a>
+              <a class="btn secondary" href="https://www.youtube.com/watch?v=YOUR_TRAILER_ID" target="_blank" rel="noopener noreferrer">
+                Watch Trailer
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more game-card blocks for future games -->
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About TD Studio</h2>
+        <p>
+          TD Studio is a small game development studio focused on delivering accessible, polished and
+          enjoyable games. We care about fair design, clear communication and respecting our players’ time.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-dark">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>If you have questions, feedback or business inquiries, feel free to reach out:</p>
+        <ul class="contact-list">
+          <li><strong>Email (general):</strong> <a href="mailto:info@tdstudio.uk">info@tdstudio.uk</a></li>
+          <li><strong>Email (business):</strong> <a href="mailto:business@tdstudio.uk">business@tdstudio.uk</a></li>
+          <li><strong>Email (support):</strong> <a href="mailto:support@tdstudio.uk">support@tdstudio.uk</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <span>© <span id="year"></span> TD Studio. All rights reserved.</span>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
