@@ -676,6 +676,12 @@ a:focus-visible,
   line-height: 1;
 }
 
+.footer-social img {
+  max-width: 100%;
+  max-height: 18px;
+  display: block;
+}
+
 .footer-content a {
   color: var(--accent);
   text-decoration: none;
