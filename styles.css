@@ -131,6 +131,24 @@ a:focus-visible,
   gap: 0.75rem;
 }
 
+/* Hero mark on home */
+
+.hero-mark {
+  padding-top: 0.5rem;
+}
+
+.hero-mark-inner {
+  max-width: 140px;
+  margin: 0 auto;
+}
+
+.hero-mark-inner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.6));
+}
+
 /* Sections */
 
 .section {
@@ -253,7 +271,7 @@ a:focus-visible,
 .game-summary-thumb img {
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: var(--radius);
   display: block;
@@ -261,7 +279,7 @@ a:focus-visible,
 
 .game-summary-thumb-inner {
   width: 100%;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   background: rgba(255, 255, 255, 0.04);
   border: 1px dashed var(--border-subtle);
   border-radius: var(--radius);
@@ -715,23 +733,25 @@ a:focus-visible,
 
 .policy-game-logo {
   flex-shrink: 0;
-  width: 120px;
+  width: 160px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .policy-game-logo img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  max-height: 120px;
-  object-fit: contain;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
 }
 
 .game-logo-placeholder {
   width: 100%;
-  aspect-ratio: 1;
-  max-width: 120px;
+  aspect-ratio: 16 / 9;
+  max-width: 160px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px dashed var(--border-subtle);
   border-radius: var(--radius);
