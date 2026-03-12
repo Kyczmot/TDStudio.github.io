@@ -33,6 +33,7 @@ html {
 body {
   margin: 0;
   font-family: var(--font-main);
+  font-size: 17px;
   background: radial-gradient(circle at top, #151c33 0, var(--bg) 45%);
   color: var(--text-main);
 }
@@ -265,7 +266,7 @@ a:focus-visible,
 
 .game-summary-thumb {
   flex-shrink: 0;
-  width: 90px;
+  width: 110px;
 }
 
 .game-summary-thumb img {
@@ -733,7 +734,7 @@ a:focus-visible,
 
 .policy-game-logo {
   flex-shrink: 0;
-  width: 160px;
+  width: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
