@@ -35,7 +35,7 @@
 
         <!-- Mahjong Siege -->
         <article class="game-detail-card" id="mahjong-siege">
-          <details class="game-details" open>
+          <details class="game-details">
             <summary class="game-summary">
               <div class="game-summary-thumb">
                 <img src="Mahjong-siege-thumb-600x338.png" alt="Mahjong Siege" />
@@ -182,16 +182,32 @@
       }, 3500);
     });
 
-    // Lightbox for enlarging gallery items
+    // Lightbox with next/prev for gallery items
     (function () {
       const lightbox = document.getElementById('game-lightbox');
       if (!lightbox) return;
       const inner = lightbox.querySelector('.lightbox-inner');
 
-      function openLightbox(node) {
-        if (!inner) return;
-        inner.innerHTML = '';
-        inner.appendChild(node.cloneNode(true));
+      // Build basic structure once
+      inner.innerHTML = '<div class="lightbox-content"><button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">\u2039</button><div class="lightbox-frame"></div><button type="button" class="lightbox-nav lightbox-next" aria-label="Next image">\u203a</button></div>';
+      const frame = inner.querySelector('.lightbox-frame');
+      const prevBtn = inner.querySelector('.lightbox-prev');
+      const nextBtn = inner.querySelector('.lightbox-next');
+
+      let currentSlides = null;
+      let currentIndex = 0;
+
+      function render() {
+        if (!currentSlides || !frame) return;
+        frame.innerHTML = currentSlides[currentIndex].innerHTML;
+      }
+
+      function openLightboxFor(gallery, slideIndex) {
+        const slides = Array.from(gallery.querySelectorAll('.game-gallery-slide'));
+        if (!slides.length) return;
+        currentSlides = slides;
+        currentIndex = slideIndex;
+        render();
         lightbox.classList.add('is-open');
       }
 
@@ -201,8 +217,28 @@
 
       document.querySelectorAll('.game-gallery img, .game-gallery-placeholder').forEach(function (el) {
         el.addEventListener('click', function () {
-          openLightbox(el);
+          const slide = el.closest('.game-gallery-slide');
+          const gallery = el.closest('.game-gallery');
+          if (!slide || !gallery) return;
+          const slides = Array.from(gallery.querySelectorAll('.game-gallery-slide'));
+          const index = slides.indexOf(slide);
+          if (index === -1) return;
+          openLightboxFor(gallery, index);
         });
+      });
+
+      prevBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        if (!currentSlides) return;
+        currentIndex = (currentIndex - 1 + currentSlides.length) % currentSlides.length;
+        render();
+      });
+
+      nextBtn.addEventListener('click', function (event) {
+        event.stopPropagation();
+        if (!currentSlides) return;
+        currentIndex = (currentIndex + 1) % currentSlides.length;
+        render();
       });
 
       lightbox.addEventListener('click', function (event) {
