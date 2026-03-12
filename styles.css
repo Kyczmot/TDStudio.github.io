@@ -70,25 +70,25 @@ body {
 }
 
 .logo {
-  height: 64px;
+  height: 56px;
   width: auto;
   display: block;
 }
 
 .small-logo {
-  height: 44px;
+  height: 56px;
 }
 
 .main-nav {
   display: flex;
-  gap: 1rem;
-  font-size: 0.95rem;
+  gap: 1.1rem;
+  font-size: 1.05rem;
 }
 
 .main-nav a {
   color: var(--text-muted);
   text-decoration: none;
-  padding: 0.35rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 999px;
   transition: color var(--transition-fast), background-color var(--transition-fast);
 }
